@@ -1,0 +1,18 @@
+{
+  "name": "cersei",
+  "version": "1.0.0",
+  "description": "shame! ding ding ding",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shame"
+  ],
+  "author": "Brandon Kvarda",
+  "license": "ISC",
+  "dependencies": {
+    "eventsource": "^0.1.6",
+    "express": "^4.13.3"
+  }
+}
