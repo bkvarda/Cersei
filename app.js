@@ -19,7 +19,7 @@ if(process.platform == 'win32' || 'win64'){
 	//it is Windows
 	var player = __dirname + '/players/mpg123-1.22.0-x86-64/mpg123.exe';
 }
-else if(process.platform == 'darwin'){
+if(process.platform == 'darwin'){
 
 	//it is Mac
 	var player = 'afplay';
