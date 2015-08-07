@@ -4,6 +4,7 @@ var express = require('express');
 var app = express();
 var exec = require('child_process').exec;
 var uri = "https://api.particle.io/v1/events";
+var shame = __dirname + '/sounds/shame.mp3';
 var config = require('./config.json');
 var token = "Bearer " + config.token;
 var eventSourceInitDict = {rejectUnauthorized: false, headers: {'Authorization': token}};
@@ -56,7 +57,7 @@ es.onerror = function(err){
 //Shame! DING DING DING!
 function playShame(callback){
 	console.log("Shame! Ding Ding Ding");
-	exec(player +' http://www.myinstants.com/media/sounds/shame-1.mp3', function(error, stdout, stderr){
+	exec(player +' '+shame, function(error, stdout, stderr){
 		if(error){
 			return callback(error);
 		}
