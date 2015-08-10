@@ -8,13 +8,11 @@
         var source = new EventSource('https://api.particle.io/v1/events\?access_token=09bdf9cdbde40ee34a6d792706e99cbd3c46692f')
 				source.addEventListener('shamedingdingding',function(e) {
           document.body.innerHTML += e.data + '<br>';
-          playSound('http://www.myinstants.com/media/sounds/shame-1.mp3');
+					var vid = document.getElementById("shame");
+					vid.play();
         });
-
-        function playSound(url) {
-					var a = new Audio(url);
-        	a.play();
-				}
   </script>
+	<audio src="http://www.myinstants.com/media/sounds/shame-1.mp3" id="shame" type="audio/mpeg">
+	</audio>
   </body>
   </html>
